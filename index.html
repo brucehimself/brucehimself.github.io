@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -10,15 +11,17 @@
 </head>
 
 <body style='margin: 0; overflow: hidden;'>
-    <a-scene
-        vr-mode-ui="enabled: false"
-		embedded
-        arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: true;'>
+    <a-scene vr-mode-ui="enabled: false" embedded arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: true;'>
 
-        <a-entity gps-new-entity-place="latitude: -34.139844166987444; longitude: 18.424841977726736;" gltf-model="school.gltf"></a-entity>
-	<a-box material="color: yellow" gps-new-entity-place="latitude: -34.13441411385418; longitude: 18.42708226496089" position="0 0 0"/></a-entity>
+        <a-entity gps-entity-place="latitude: -34.139844166987444; longitude: 18.424841977726736;" gltf-model="#schoolModel"></a-entity>
+        <a-box material="color: yellow" gps-entity-place="latitude: -34.13441411385418; longitude: 18.42708226496089" position="0 0 0"></a-box>
+
+        <a-assets>
+            <a-asset-item id="schoolModel" src="school.gltf"></a-asset-item>
+        </a-assets>
 
         <a-camera gps-camera rotation-reader></a-camera>
-	</a-scene>
+    </a-scene>
 </body>
-<!--gpsTimeInterval="100"-->
+
+</html>
