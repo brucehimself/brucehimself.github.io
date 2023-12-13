@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>GeoAr.js Demo</title>
+    <title>Location-based AR.js demo</title>
     <script src='https://aframe.io/releases/1.5.0/aframe.min.js'></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
@@ -13,13 +13,8 @@
 <body style='margin: 0; overflow: hidden;'>
     <a-scene vr-mode-ui="enabled: false" embedded arjs='sourceType: webcam; sourceWidth:640; sourceHeight:480; displayWidth: 640; displayHeight: 480; debugUIEnabled: false;'>
 
-        <!-- Preload Assets -->
-        <a-assets>
-            <a-asset-item id="schoolModel" src="school.gltf"></a-asset-item>
-        </a-assets>
-
         <!-- AR Entities -->
-        <a-entity gps-new-entity-place="latitude: -34.139844166987444; longitude: 18.424841977726736;" gltf-model="#schoolModel"></a-entity>
+        <a-entity gps-new-entity-place="latitude: -34.139844166987444; longitude: 18.424841977726736;" gltf-model="school.gltf"></a-entity>
         <a-box gps-new-entity-place="latitude: -34.13441411385418; longitude: 18.42708226496089" material="color: green"></a-box>
 
         <!-- AR Camera -->
